@@ -1,0 +1,14 @@
+.loader {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background-color: rgb(255, 48, 231);
+    animation: blink 500ms ease-in-out infinite;
+    font-size: 30px;
+}
+
+@keyframes blink{
+    0%{opacity: 1;}
+    50%{opacity: 0;}
+    100%{opacity: 1;}
+}

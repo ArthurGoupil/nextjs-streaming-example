@@ -1,0 +1,36 @@
+
+.container {
+	width: 100vw;
+	height: 100px;
+	background-color: red
+}
+
+.nav {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	color: white;
+	font-weight: bold;
+	font-size: 25px;
+	margin: 0 40px;
+}
+
+.nav-el {
+	margin-right: 40px;
+}
+
+.user {
+	display: flex;
+	align-items: center;
+}
+
+.user img {
+	background-color: white;
+	margin-left: 20px;
+	border-radius: 25px;
+}
+
+.loading {
+	color: yellow
+}

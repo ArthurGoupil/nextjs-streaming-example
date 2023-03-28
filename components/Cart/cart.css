@@ -1,0 +1,10 @@
+.cart-container {
+    padding: 20px;
+    width: 200px;
+    min-height: 100vh;
+    background-color: aqua;
+}
+
+.cart-line {
+    margin-bottom: 20px;
+}

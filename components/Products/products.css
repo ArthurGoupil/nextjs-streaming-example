@@ -1,0 +1,8 @@
+.products-cart-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-item {
+    margin-bottom: 20px;
+}
