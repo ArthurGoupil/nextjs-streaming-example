@@ -6,12 +6,12 @@ import { Posts } from './Posts/Posts';
 
 export const Blog = () => {
   const [tab, setTab] = useState<'posts' | 'comments'>('posts');
-  const [, startTransition] = useTransition();
+  const [isPending, startTransition] = useTransition();
 
   const selectTab = (tab: 'posts' | 'comments') => {
-    // startTransition(() => {
-    setTab(tab);
-    // });
+    startTransition(() => {
+      setTab(tab);
+    });
   };
 
   return (
@@ -24,7 +24,15 @@ export const Blog = () => {
       </div>
 
       <Suspense fallback={<Loader text={`Loading`} />}>
-        {tab === 'posts' ? <Posts /> : <Comments />}
+        {tab === 'posts' ? (
+          <div style={{ opacity: isPending ? 0.8 : 1 }}>
+            <Posts />
+          </div>
+        ) : (
+          <div style={{ opacity: isPending ? 0.8 : 1 }}>
+            <Comments />
+          </div>
+        )}
       </Suspense>
     </>
   );
